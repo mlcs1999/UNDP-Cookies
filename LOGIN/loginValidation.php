@@ -6,11 +6,13 @@
     if(isset($_POST['submit'])) {
         $email = $_POST['email'];
         $password = $_POST['password'];
+        $username =  $_POST['username'];
 
         if($email == $adminEmail && $password == $adminPass) {
             if( isset($_POST['remember']) ) {
                 setcookie('email', $email, time() + 60*60*10);
                 setcookie('password', $password, time() + 60*60);
+                setcookie('username', $username, time() + 60*60);
             }
             session_start();
             $_SESSION['email'] = $email;

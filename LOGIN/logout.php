@@ -3,13 +3,14 @@
     session_destroy();
 
     //Brisanje kolacica
-    if( isset($_COOKIE['email']) && isset($_COOKIE['password'] )) {
+    if( isset($_COOKIE['email']) && isset($_COOKIE['password']) && isset($_COOKIE['username'] )) {
         $emailCookie = $_COOKIE['email'];
         $passwordCookie = $_COOKIE['password'];
+        $usernameCookie = $_COOKIE['username'];
 
         setcookie('email', $emailCookie, time() - 1);
         setcookie('password', $passwordCookie, time() - 60);
-
+        setcookie('username', $usernameCookie, time() - 60);
     }
 
     echo "Uspesno ste se odjavili!

@@ -19,11 +19,14 @@
 <body>
     <h3>FIRST REAL LOGIN</h3>
     <form action="loginValidation.php" method="POST">
+        <label for="username">Username:</label>
+        <div>
+            <input type="text" id="username" name="username" placeholder="Unesi username...">
+        </div>
         <label for="email">Email:</label>
         <div>
             <input type="text" id="email" name="email" placeholder="Unesi email...">
         </div>
-        <!-- INPUT: IME -->
         <label for="password">Sifra:</label>
         <div>
             <input type="password" name="password" id="password" placeholder="Unesi sifru..">
