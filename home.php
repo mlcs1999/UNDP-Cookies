@@ -42,5 +42,4 @@
     
     print_r($userDeserijalizovan);
 
-
 ?>
